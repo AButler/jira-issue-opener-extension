@@ -5,6 +5,8 @@ let baseUrl = null;
 const enterKeyCode = 13;
 
 function initialize( e ) {
+  initializeLocale();
+
   chrome.storage.sync.get( {
     baseUrl: null,
     defaultProject: null
@@ -30,6 +32,15 @@ function initialize( e ) {
     }
     idField.focus();
   } );
+}
+
+function initializeLocale() {
+  document.getElementById( 'lblHeader' ).innerText = chrome.i18n.getMessage( "popupHeader" );
+  document.getElementById( 'lblId' ).innerText = chrome.i18n.getMessage( "popupIdLabel" );
+  document.getElementById( 'options' ).innerText = chrome.i18n.getMessage( "popupOptionsLabel" );
+  document.getElementById( 'submit' ).innerText = chrome.i18n.getMessage( "popupSubmitLabel" );
+  document.getElementById( 'cancel' ).innerText = chrome.i18n.getMessage( "popupCancelLabel" );
+  document.getElementById( 'error' ).innerText = chrome.i18n.getMessage( "popupInvalidJiraMessage" );
 }
 
 function onTextSelected( selection ) {

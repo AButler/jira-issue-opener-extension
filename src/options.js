@@ -1,4 +1,6 @@
 function initialize() {
+  initializeLocale();
+
   document.getElementById( 'submit' ).addEventListener( 'click', onSubmit );
   document.getElementById( 'cancel' ).addEventListener( 'click', onCancel );
 
@@ -9,6 +11,15 @@ function initialize() {
     document.getElementById( 'baseUrl' ).value = items.baseUrl;
     document.getElementById( 'defaultProject' ).value = items.defaultProject;
   } );
+}
+
+function initializeLocale() {
+  document.getElementById( 'lblBaseUrl' ).innerText = chrome.i18n.getMessage( "optionsBaseUrlLabel" );
+  document.getElementById( 'lblDefaultProject' ).innerText = chrome.i18n.getMessage( "optionsDefaultProjectLabel" );
+  document.getElementById( 'baseUrl' ).placeholder = chrome.i18n.getMessage( "optionsBaseUrlPlaceholder" );
+  document.getElementById( 'defaultProject' ).placeholder = chrome.i18n.getMessage( "optionsDefaultProjectPlaceholder" );
+  document.getElementById( 'submit' ).innerText = chrome.i18n.getMessage( "optionsSubmitLabel" );
+  document.getElementById( 'cancel' ).innerText = chrome.i18n.getMessage( "optionsCancelLabel" );
 }
 
 function onSubmit() {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jira Opener Popup</title>
+  <title>Jira Issue Opener Popup</title>
   <script src="popup.js"></script>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
@@ -11,9 +11,9 @@
   <div id="container">
     <div>
       <a id="options" href="javascript:void(0)" class="options">Options</a>
-      <h1>Jira Opener</h1>
+      <h1 id="lblHeader">Jira Issue Opener</h1>
     </div>
-    <label for="id">ID</label>
+    <label id="lblId" for="id">ID</label>
     <input id="id" type="text" class="full-width" autocomplete="off">
     <div id="error" class="error hidden">Invalid Jira ID</div>
     <div class="actions">

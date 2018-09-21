@@ -1,0 +1,70 @@
+{
+  "extName": {
+    "message": "Jira Issue Opener",
+    "description": "Extension name"
+  },
+  "extShortName": {
+    "message": "Jira Opener",
+    "description": "Extension short name"
+  },
+  "extDescription": {
+    "message": "Opens Jira links",
+    "description": "Extension description"
+  },
+  "extActionTitle": {
+    "message": "Open in Jira",
+    "description": "Extension browser_action title"
+  },
+  
+
+  "popupHeader": {
+    "message": "Jira Issue Opener",
+    "description": "Header in popup"
+  },
+  "popupIdLabel": {
+    "message": "ID",
+    "description": "ID label in popup"
+  },
+  "popupOptionsLabel": {
+    "message": "Options",
+    "description": "Options label in popup"
+  },
+  "popupSubmitLabel": {
+    "message": "Open Jira",
+    "description": "Open button text in popup"
+  },
+  "popupCancelLabel": {
+    "message": "Close",
+    "description": "Close button text in popup"
+  },
+  "popupInvalidJiraMessage": {
+    "message": "Invalid Jira ID",
+    "description": "Invalid Jira ID error message text in popup"
+  },
+
+
+  "optionsBaseUrlLabel": {
+    "message": "Jira URL",
+    "description": "Base URL label in options"
+  },
+  "optionsDefaultProjectLabel": {
+    "message": "Default Project",
+    "description": "Default project label in options"
+  },
+  "optionsBaseUrlPlaceholder": {
+    "message": "Enter Jira URL (e.g. https://[tenant].atlassian.net)",
+    "description": "Base URL placeholder in options"
+  },
+  "optionsDefaultProjectPlaceholder": {
+    "message": "Enter Default Project Key (e.g. ABC)",
+    "description": "Default project placeholder in options"
+  },
+  "optionsSubmitLabel": {
+    "message": "Save",
+    "description": "Save button text in options"
+  },
+  "optionsCancelLabel": {
+    "message": "Close",
+    "description": "Close button text in options"
+  }
+}
