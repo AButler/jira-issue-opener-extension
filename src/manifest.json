@@ -1,6 +1,10 @@
 {
-  "name": "Jira Opener Extension",
+  "name": "Jira Issue Opener",
+  "short_name": "Jira Opener",
   "version": "1.0",
+  "author": "webbutler",
+  "homepage_url": "https://github.com/AButler/jira-issue-opener-extension",
+  "default_locale": "en",
   "description": "Opens Jira links",
   "permissions": ["activeTab", "storage"],
   "options_ui": { 
