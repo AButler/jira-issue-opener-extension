@@ -2,6 +2,10 @@
 
 Google Chrome Extension to open Jira issues quickly.
 
+## How To Install
+
+Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/ehhagkldpoadapebieklfdnpcdldgakp)
+
 ## How To Use
 
 ### Open via Popup
