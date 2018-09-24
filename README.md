@@ -12,6 +12,10 @@ Click the icon to open the popup, enter a Jira ID and click `Open Jira` to open 
 
 Select a Jira ID on a website and click the icon to open the selected Jira ID in a new tab.
 
+### Search using the Omnibox
+
+Enter `jira` in to the omnibox to start a search followed by your search text. Enter a Jira ID to go straight to that issue (note: numbers will automatically be prefixed by your default project) or enter search text to search for an issue.
+
 ## Options
 
 ### Jira URL

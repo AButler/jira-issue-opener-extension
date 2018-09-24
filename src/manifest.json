@@ -1,12 +1,22 @@
 {
   "name": "__MSG_extName__",
   "short_name": "__MSG_extShortName__",
-  "version": "1.0",
+  "version": "1.1",
   "author": "webbutler",
   "homepage_url": "https://github.com/AButler/jira-issue-opener-extension",
   "default_locale": "en",
   "description": "__MSG_extDescription__",
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab", "storage", "tabs"],
+  "background": {
+    "scripts": [
+      "lib/jira.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "omnibox": {
+    "keyword": "jira"
+  },
   "options_ui": { 
     "page": "options.html",
     "open_in_tab": false

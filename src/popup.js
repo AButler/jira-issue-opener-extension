@@ -86,32 +86,16 @@ function handleJiraLink( id ) {
   
   id = id.trim().replace( ' ', '-' );
 
-  if( isNumberOnly( id ) && defaultProject ) {
+  if( JiraHelpers.isNumberOnly( id ) && defaultProject ) {
     id = `${defaultProject}-${id}`;
   }
 
-  if( !isJiraId( id ) ) {
+  if( !JiraHelpers.isJiraId( id ) ) {
     return false;
   }
 
-  chrome.tabs.create( { url: generateUrl( id ) } );
+  chrome.tabs.create( { url: JiraHelpers.generateJiraIssueUrl( baseUrl, id ) } );
   return true;
-}
-
-function generateUrl( id ) {
-  return `${baseUrl}/browse/${id}`;
-}
-
-function isNumberOnly( id ) {
-  var numberRegEx = /^[0-9]+$/g;
-
-  return !!id.match( numberRegEx );
-}
-
-function isJiraId( id ) {
-  var jiraRegEx = /^((?!([A-Z0-9a-z]{1,10})-?$)[A-Z]{1}[A-Z0-9]+-\d+)$/g;
-
-  return !!id.match( jiraRegEx );
 }
 
 document.addEventListener( 'DOMContentLoaded', initialize );
