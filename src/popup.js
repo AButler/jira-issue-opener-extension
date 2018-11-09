@@ -90,6 +90,10 @@ function handleJiraLink( id ) {
     id = `${defaultProject}-${id}`;
   }
 
+  if( id.startsWith( `${defaultProject}-${defaultProject}-` ) ) {
+    id = id.substring( defaultProject.length + 1 );
+  }
+
   if( !JiraHelpers.isJiraId( id ) ) {
     return false;
   }

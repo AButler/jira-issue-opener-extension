@@ -1,7 +1,7 @@
 {
   "name": "__MSG_extName__",
   "short_name": "__MSG_extShortName__",
-  "version": "1.1",
+  "version": "1.2",
   "author": "webbutler",
   "homepage_url": "https://github.com/AButler/jira-issue-opener-extension",
   "default_locale": "en",
