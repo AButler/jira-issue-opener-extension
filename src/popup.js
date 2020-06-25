@@ -27,9 +27,6 @@ function initialize( e ) {
 
     var idField = document.getElementById( 'id' );
     idField.addEventListener( 'keypress', onIdFieldKeypress );
-    if( defaultProject ) {
-      idField.value = `${defaultProject}-`;
-    }
     idField.focus();
   } );
 }
@@ -98,7 +95,18 @@ function handleJiraLink( id ) {
     return false;
   }
 
-  chrome.tabs.create( { url: JiraHelpers.generateJiraIssueUrl( baseUrl, id ) } );
+  chrome.tabs.query( { active: true, currentWindow: true }, function( tabs ) {
+    let index = 0;
+    if( tabs && tabs.length ) {
+      index = tabs[0].index + 1;
+    }
+
+    chrome.tabs.create( { 
+      index: index,
+      url: JiraHelpers.generateJiraIssueUrl( baseUrl, id ),
+    } );
+  } );
+  
   return true;
 }
 
