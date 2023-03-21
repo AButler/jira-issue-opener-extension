@@ -6,22 +6,18 @@
   "homepage_url": "https://github.com/AButler/jira-issue-opener-extension",
   "default_locale": "en",
   "description": "__MSG_extDescription__",
-  "permissions": ["activeTab", "storage", "tabs"],
+  "permissions": ["scripting", "activeTab", "storage"],
   "background": {
-    "scripts": [
-      "lib/jira.js",
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "service-worker.js"
   },
   "omnibox": {
     "keyword": "jira"
   },
-  "options_ui": { 
+  "options_ui": {
     "page": "options.html",
     "open_in_tab": false
   },
-  "browser_action": {
+  "action": {
     "default_title": "__MSG_extActionTitle__",
     "default_popup": "popup.html"
   },
@@ -31,5 +27,5 @@
     "48": "images/jira-48.png",
     "128": "images/jira-128.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
