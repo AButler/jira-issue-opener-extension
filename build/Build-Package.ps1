@@ -1,11 +1,16 @@
 $ErrorActionPreference = 'Stop'
 
-$solutionDirectory = Join-Path $PSScriptRoot '..\'
+$solutionDirectory = Split-Path $PSScriptRoot
 $srcDirectory = Join-Path $solutionDirectory 'src'
-$packageFilename = Join-Path $solutionDirectory 'packages-build\jira-issue-opener.zip'
+$packageDirectory = Join-Path $solutionDirectory 'packages-build'
+$packageFilename = Join-Path $packageDirectory 'jira-issue-opener.zip'
+
+if (!(Test-Path $packageDirectory)) {
+  New-Item $packageDirectory -ItemType Directory | Out-Null
+}
 
 Write-Host 'Building package...'
-if( Test-Path $packageFilename ) {
+if ( Test-Path $packageFilename ) {
   Remove-Item $packageFilename
 }
 
